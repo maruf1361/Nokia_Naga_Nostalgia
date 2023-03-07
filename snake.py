@@ -19,3 +19,16 @@ class Snake:
             y = self.turtle_list[i - 1].ycor()
             self.turtle_list[i].goto(x, y)
         self.turtle_list[0].forward(DIR)
+
+    def up(self):
+        if self.turtle_list[0].heading() != 270:
+            self.turtle_list[0].setheading(90)
+    def down(self):
+        if self.turtle_list[0].heading() != 90:
+            self.turtle_list[0].setheading(270)
+    def right(self):
+        if self.turtle_list[0].heading() != 180:
+            self.turtle_list[0].setheading(0)
+    def left(self):
+        if self.turtle_list[0].heading() != 0:
+            self.turtle_list[0].setheading(180)
